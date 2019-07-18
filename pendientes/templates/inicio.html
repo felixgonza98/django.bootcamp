@@ -1,0 +1,19 @@
+<html>
+    <body bgcolor="whitegray">
+        <h1>Bienvenidos a la lista de tareas </h1>
+        <h2>Aca van a ir las tareas</h2>
+        <p>Pepito es un dinosaurio verde</p>
+        <li>respuestas</li>
+        Hola me llamo {{ nombre }} y tengo {{ edad }} y mis hobbies son {{hobbies.0}}, {{hobbies.1}}, {{hobbies.2}}
+    mis hobbies son
+    {% for x in hobbies%}
+        <li>{{x}}</li>
+        {% endfor %}
+        <p>Y bue, mis tareas son:</p>
+
+        {% for tarea in listita_tareas %}
+        <li>{{tarea.titulo}}: {{tarea.descripcion}}</li>
+        {%endfor%}
+    </body>
+
+</html>
